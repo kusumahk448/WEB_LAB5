@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <?xml-model href="restaurant.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?> -->
+
+<?xml-stylesheet type="text/xsl" href="restaurant.xsl"?>
+
+<restaurants xmlns="http://www.example.org/restaurant"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:SchemaLocation="http://www.example.org/restaurant restaurant1.xsd">
+    <restaurant id="R1">
+        <restaurant-id>1</restaurant-id>
+        <restaurant-name>The Gourmet Burger</restaurant-name>
+        <hours>Mon-Sun: 11am-9pm</hours>
+        <menu>
+            <dish id="D1">
+                <dish-name>Truffle Burger</dish-name>
+                <description>Juicy beef patty topped with truffle aioli, arugula, and gourmet cheese on a brioche bun.</description>
+                <price>14.99</price>
+            </dish>
+        </menu>
+        <reviews>Exceptional gourmet burgers with high-quality ingredients. A bit pricey but worth it.</reviews>
+    </restaurant>
+    <restaurant id="R2">
+        <restaurant-id>2</restaurant-id>
+        <restaurant-name>Grill- Chill</restaurant-name>
+        <hours>Mon-Sun: 10am-10pm</hours>
+        <menu>
+            <dish id="D2">
+                <dish-name>BBQ Bacon Burger</dish-name>
+                <description>Grilled beef patty with crispy bacon, BBQ sauce, cheddar cheese, and onion rings.</description>
+                <price>12.49</price>
+            </dish>
+        </menu>
+        <reviews>Good place for casual dining with a relaxed atmosphere and delicious BBQ burgers.</reviews>
+    </restaurant>
+    <restaurant id="R3">
+        <restaurant-id>3</restaurant-id>
+        <restaurant-name>Fried Chicken Haven</restaurant-name>
+        <hours>Mon-Sun: 11am-11pm</hours>
+        <menu>
+            <dish id="D3">
+                <dish-name>Spicy Fried Chicken</dish-name>
+                <description>Crispy, spicy fried chicken served with a side of mashed potatoes and coleslaw.</description>
+                <price>10.99</price>
+            </dish>
+        </menu>
+        <reviews>Famous for its crispy and spicy fried chicken. Great value for the money.</reviews>
+    </restaurant>
+    <restaurant id="R4">
+        <restaurant-id>4</restaurant-id>
+        <restaurant-name>Fresh Delights</restaurant-name>
+        <hours>Mon-Sun: 9am-8pm</hours>
+        <menu>
+            <dish id="D4">
+                <dish-name>Veggie Supreme Sandwich</dish-name>
+                <description>Freshly made sandwich with avocado, hummus, roasted vegetables, and sprouts on whole grain bread.</description>
+                <price>8.49</price>
+            </dish>
+        </menu>
+        <reviews>Excellent choice for vegetarians and health-conscious eaters. Fresh and tasty options.</reviews>
+    </restaurant>
+    <restaurant id="R5">
+        <restaurant-id>5</restaurant-id>
+        <restaurant-name>Mexican Fiesta</restaurant-name>
+        <hours>Mon-Sun: 11am-12am</hours>
+        <menu>
+            <dish id="D5">
+                <dish-name>Beef Burrito</dish-name>
+                <description>Flour tortilla filled with seasoned beef, beans, cheese, and topped with salsa and sour cream.</description>
+                <price>7.99</price>
+            </dish>
+        </menu>
+        <reviews>Great place for authentic Mexican food with generous portions. Always a crowd-pleaser.</reviews>
+    </restaurant>
+    <restaurant id="R6">
+        <restaurant-id>6</restaurant-id>
+        <restaurant-name>Salad Sensations</restaurant-name>
+        <hours>Mon-Sun: 10am-9pm</hours>
+        <menu>
+            <dish id="D6">
+                <dish-name>Chicken Caesar Salad</dish-name>
+                <description>Grilled chicken on a bed of romaine lettuce with Caesar dressing, croutons, and parmesan cheese.</description>
+                <price>9.49</price>
+            </dish>
+            <dish id="D8">
+                <dish-name>Quinoa Power Bowl</dish-name>
+                <description>A nutritious bowl with quinoa, roasted vegetables, chickpeas, and a lemon-tahini dressing.</description>
+                <price>10.29</price>
+            </dish>
+        </menu>
+        <reviews>Perfect for a healthy lunch with a variety of fresh and nutritious options. Always satisfying.</reviews>
+    </restaurant>
+    <restaurant id="R7">
+        <restaurant-id>7</restaurant-id>
+        <restaurant-name>Classic Diner</restaurant-name>
+        <hours>Mon-Sun: 24 Hours</hours>
+        <menu>
+            <dish id="D7">
+                <dish-name>Classic Cheeseburger</dish-name>
+                <description>Classic cheeseburger with lettuce, tomato, pickles, and melted cheese on a toasted bun.</description>
+                <price>6.99</price>
+            </dish>
+        </menu>
+        <reviews>A nostalgic diner experience with all the classic American fare. Great for late-night cravings.</reviews>
+    </restaurant>
+</restaurants>
