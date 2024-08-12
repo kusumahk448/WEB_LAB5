@@ -11,32 +11,58 @@
                 <title>Restaurant Listings</title>
                 <style>
                     body { font-family: Arial, sans-serif; margin: 20px; }
-                    .restaurant { border: 1px solid #ddd; padding: 10px; margin-bottom: 10px; }
-                    .restaurant h2 { margin: 0; }
-                    .dish { margin-left: 20px; border-top: 1px solid #eee; padding-top: 5px; }
-                    .dish h4 { margin: 0; }
-                    .price { color: green; font-weight: bold; }
+                    table { width: 100%; border-collapse: collapse; }
+                    th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+                    th { background-color: #f4f4f4; }
+                    .dish-table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+                    .dish-table th, .dish-table td { border: 1px solid #ddd; padding: 5px; text-align: left; }
                 </style>
             </head>
             <body>
                 <h1>Restaurants</h1>
-                <!-- Loop through each restaurant element -->
-                <xsl:for-each select="rest:restaurants/rest:restaurant">
-                    <div class="restaurant">
-                        <h2><xsl:value-of select="rest:restaurant-name"/></h2>
-                        <p><strong>Hours:</strong> <xsl:value-of select="rest:hours"/></p>
-                        <p><strong>Reviews:</strong> <xsl:value-of select="rest:reviews"/></p>
-                        <h3>Menu</h3>
-                        <!-- Loop through each dish in the menu -->
-                        <xsl:for-each select="rest:menu/rest:dish">
-                            <div class="dish">
-                                <h4><xsl:value-of select="rest:dish-name"/></h4>
-                                <p><strong>Description:</strong> <xsl:value-of select="rest:description"/></p>
-                                <p><strong>Price:</strong> $<xsl:value-of select="rest:price"/></p>
-                            </div>
+                <!-- Main restaurant table -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Restaurant Name</th>
+                            <th>Hours</th>
+                            <th>Reviews</th>
+                            <th>Menu</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Loop through each restaurant element -->
+                        <xsl:for-each select="rest:restaurants/rest:restaurant">
+                            <tr>
+                                <td><xsl:value-of select="rest:restaurant-name"/></td>
+                                <td><xsl:value-of select="rest:hours"/></td>
+                                <td><xsl:value-of select="rest:reviews"/></td>
+                                <td>
+                                    <!-- Create a table for the menu items -->
+                                    <table class="dish-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Dish Name</th>
+                                                <th>Description</th>
+                                                <th>Price</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- Loop through each dish in the menu -->
+                                            <xsl:for-each select="rest:menu/rest:dish">
+                                                <tr>
+                                                    <td><xsl:value-of select="rest:dish-name"/></td>
+                                                    <td><xsl:value-of select="rest:description"/></td>
+                                                    <td>$<xsl:value-of select="rest:price"/></td>
+                                                </tr>
+                                            </xsl:for-each>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
                         </xsl:for-each>
-                    </div>
-                </xsl:for-each>
+                    </tbody>
+                </table>
             </body>
         </html>
     </xsl:template>
