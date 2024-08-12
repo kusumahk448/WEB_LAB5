@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- <?xml-model href="restaurant.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?> -->
 
-<?xml-stylesheet type="text/xsl" href="restaurant.xsl"?>
+<?xml-stylesheet type="text/xsl" href="transform.xsl"?>
 
 <restaurants xmlns="http://www.example.org/restaurant"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:SchemaLocation="http://www.example.org/restaurant restaurant1.xsd">
+ xsi:SchemaLocation="http://www.example.org/restaurant restaurant.xsd">
     <restaurant id="R1">
         <restaurant-id>1</restaurant-id>
         <restaurant-name>The Gourmet Burger</restaurant-name>
